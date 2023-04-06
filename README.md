@@ -1,24 +1,31 @@
-# README
+# Ventcalc
+## Description
+Simple application used for estimation of air flows for rooms in building when planning mechanical ventilation. The main goals of this application is to help with estimating:
+  * total pressure loss in installation at normal conditions,
+  * total air volume for AHU (air handling unit) selection,
+  * air duct sizing.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Also It aims to create reports of estimated savings on energy bills when installed in your house.
 
-Things you may want to cover:
+## Requirements
+For the development I have used:
+  * ruby 3.2.2
+  * rails 7.0.4
+  * PostgreSQL 15.2
 
-* Ruby version
+## Installation
+  1. Clone the repository
+  ```
+    git clone https://github.com/rebelyer/ventcalc.git
+  ```
+  2. Setup the application 
+  ```
+    ./bin/setup
+  ```
+  3. Start the Rails server
+  ```
+    ./bin/rails s
+  ```
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Feedback and contribution
+You're welcome to send your ideas, comments, feature requests or whatever you would like to change in this application. Also I'm open to your contribution.
