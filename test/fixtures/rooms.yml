@@ -1,0 +1,42 @@
+# == Schema Information
+#
+# Table name: rooms
+#
+#  id               :bigint           not null, primary key
+#  air_direction    :integer          not null
+#  air_flow         :integer          not null
+#  area             :float            not null
+#  height           :float            not null
+#  name             :string           not null
+#  residents_number :integer          not null
+#  type             :integer          not null
+#  created_at       :datetime         not null
+#  updated_at       :datetime         not null
+#  floor_id         :bigint           not null
+#
+# Indexes
+#
+#  index_rooms_on_floor_id  (floor_id)
+#
+# Foreign Keys
+#
+#  fk_rails_...  (floor_id => floors.id)
+#
+
+one:
+  name: MyString
+  type: 1
+  residents_number: 1
+  area: 1.5
+  height: 1.5
+  air_flow: 1
+  air_direction: 1
+
+two:
+  name: MyString
+  type: 1
+  residents_number: 1
+  area: 1.5
+  height: 1.5
+  air_flow: 1
+  air_direction: 1
