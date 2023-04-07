@@ -7,6 +7,9 @@ Simple application used for estimation of air flows for rooms in building when p
 
 Also It aims to create reports of estimated savings on energy bills when installed in your house.
 
+Here's how it should look like when done:
+![Ventcalc visualisation](./doc/ventcalc_visualisation.png "Ventcalc visualisation")
+
 ## Requirements
 For the development I have used:
   * ruby 3.2.2
