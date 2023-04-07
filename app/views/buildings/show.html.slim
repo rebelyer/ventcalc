@@ -20,11 +20,13 @@ main.container
   
   .building__floors 
     h3 Floors 
+    = link_to 'new floor', new_building_floor_path(@building)
     / hr
 
     - if @building.floors.any?
-      = render @building.floors
+      = render @building.floors, building: @building
     - else
       | You don't have any floors yet.
       br
-      | Get started by creating a new floor. 
+      | Get started by creating a 
+      = link_to 'new floor.', new_building_floor_path(@building)

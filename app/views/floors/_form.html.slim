@@ -1,0 +1,14 @@
+= form_with model: [building, floor], class: "floor form" do |f|
+  - if floor.errors.any?
+    .error-message
+      = floor.errors.full_messages.to_sentence.capitalize
+
+  .form__group
+    = f.label :name
+    = f.text_field :name, autofocus: true
+
+  .form__group 
+    = f.label :position 
+    = f.text_field :position
+ 
+  = f.submit class: "btn btn--secondary"

@@ -1,0 +1,5 @@
+.floor
+  = link_to floor.name, building_floor_path(building, floor)
+  .floor__actions
+    = button_to "Delete", building_floor_path(building, floor), method: :delete, class: "btn btn--light"
+    = link_to "Edit", edit_building_floor_path(building, floor), class: "btn btn--light"

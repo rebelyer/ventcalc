@@ -1,0 +1,19 @@
+main
+  .header
+    h1 = @floor.name
+    hr
+  
+  .floor__rooms 
+    h3 Rooms 
+    = link_to 'new room', new_building_floor_room_path(@building, @floor)
+
+    - if @floor.rooms.any?
+      = render @floor.rooms, floor: @floor
+    - else 
+      | You dont have any rooms yet.
+      br/
+      | Get started by creating a 
+      = link_to 'new room.', new_building_floor_room_path(@building, @floor)
+
+
+
