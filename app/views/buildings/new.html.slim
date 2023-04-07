@@ -1,0 +1,8 @@
+main.container
+  = link_to sanitize("&larr; Back to buildings"), buildings_path
+
+  .header
+    h1 New building
+    hr
+
+  = render "form", building: @building

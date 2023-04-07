@@ -1,0 +1,30 @@
+main.container 
+  .header
+    h1 = @building.investor_name
+    hr
+
+  .building__details 
+    h3 Details 
+    / hr
+
+    p 
+      | Adress: 
+      = @building.address 
+    p 
+      | Total area: 
+      = @building.building_area 
+      |  m²
+    p 
+      | Number of occupants: 
+      = @building.residents_number
+  
+  .building__floors 
+    h3 Floors 
+    / hr
+
+    - if @building.floors.any?
+      = render @building.floors
+    - else
+      | You don't have any floors yet.
+      br
+      | Get started by creating a new floor. 

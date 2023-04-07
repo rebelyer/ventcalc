@@ -1,0 +1,5 @@
+.building
+  = link_to building.investor_name, building
+  .building__actions 
+    = button_to "Delete", building_path(building), method: :delete, class: "btn btn--light"
+    = link_to "Edit", edit_building_path(building), class: "btn btn--light"

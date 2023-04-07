@@ -78,3 +78,5 @@ end
 gem "devise", "~> 4.9"
 
 gem "pundit", "~> 2.3"
+
+gem "slim-rails", "~> 3.6"

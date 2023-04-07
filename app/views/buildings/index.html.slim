@@ -1,0 +1,13 @@
+main.container
+  .header
+    h1 Buildings
+    = link_to "new building", new_building_path
+    hr
+
+  - if @buildings.any?
+    = render @buildings
+  - else
+    | You don't have any buildings yet.
+    br
+    | Get started by creating a 
+    = link_to 'new building.', new_building_path 

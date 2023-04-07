@@ -1,0 +1,22 @@
+= form_with model: building, class: "building form" do |f|
+  - if building.errors.any?
+    .error-message
+      = building.errors.full_messages.to_sentence.capitalize
+
+  .form__group
+    = f.label :address
+    = f.text_field :address, autofocus: true
+
+  .form__group 
+    = f.label :building_area 
+    = f.text_field :building_area
+
+  .form__group 
+    = f.label :investor_name
+    = f.text_field :investor_name
+
+  .form__group 
+    = f.label :residents_number
+    = f.text_field :residents_number
+
+  = f.submit class: "btn btn--secondary"

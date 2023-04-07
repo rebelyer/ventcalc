@@ -1,7 +1,6 @@
 class BuildingPolicy < ApplicationPolicy
 
   class Scope < Scope
-    # NOTE: Be explicit about which records you allow access to!
     def resolve
       if user.admin?
         scope.all
@@ -12,6 +11,26 @@ class BuildingPolicy < ApplicationPolicy
   end
 
   def new?
-    user
+    true
+  end
+
+  def create?
+    true
+  end
+
+  def edit?
+    user.admin? || record.user == user
+  end
+
+  def update?
+    user.admin? || record.user == user
+  end
+
+  def show?
+    user.admin? || record.user == user
+  end
+
+  def destroy?
+    user.admin? || record.user == user
   end
 end

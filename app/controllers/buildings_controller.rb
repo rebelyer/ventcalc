@@ -45,7 +45,7 @@ class BuildingsController < ApplicationController
   end
 
   def destroy
-    @building = Building.destroy(params[:id])
+    @building = Building.find(params[:id])
     authorize(@building)
     @building.destroy
     redirect_to buildings_path
