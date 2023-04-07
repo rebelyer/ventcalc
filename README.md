@@ -27,5 +27,8 @@ For the development I have used:
     ./bin/rails s
   ```
 
+## Try it
+You can check how the application work by visiting [ventcalc.herokuapp.com](https://ventcalc.herokuapp.com/).
+
 ## Feedback and contribution
 You're welcome to send your ideas, comments, feature requests or whatever you would like to change in this application. Also I'm open to your contribution.
