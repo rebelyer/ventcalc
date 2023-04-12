@@ -21,14 +21,25 @@ require "test_helper"
 
 class FloorTest < ActiveSupport::TestCase
   test 'should not save a floor without a name' do
-    skip 'test later'
+    building = build(:building)
+    floor = Floor.new
+    floor.position = 1
+    floor.building = building
+    assert_not floor.save, 'Saved a floor without a name'
   end
 
   test 'should not save a floor without a position' do
-    skip 'test later'
+    building = build(:building)
+    floor = Floor.new
+    floor.name = 'parter'
+    floor.building = building
+    assert_not floor.save, 'Saved a floor without a position'
   end
 
   test 'shoult not save a floor without a building' do
-    skip 'test later'
+    floor = Floor.new
+    floor.name = 'parter'
+    floor.position = 1
+    assert_not floor.save, 'Saved a floor without a building'
   end
 end

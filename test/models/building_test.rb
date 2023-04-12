@@ -22,26 +22,52 @@
 require "test_helper"
 
 class BuildingTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
   test 'should not save a building without an address' do
-    skip 'test later'
+    user = build(:user)
+    building = Building.new
+    building.building_area = 192
+    building.investor_name = 'Jacob Stellar'
+    building.residents_number = 4
+    building.user = user
+    assert_not building.save, 'Saved the building without an address'
   end
 
   test 'should not save a building without a building area' do
-    skip 'test later'
+    user = build(:user)
+    building = Building.new
+    building.address = '30-310 Wrocław, ul. Komandosów 14/12'
+    building.investor_name = 'Jacob Stellar'
+    building.residents_number = 4
+    building.user = user
+    assert_not building.save, 'Saved the building without a building area'
   end
 
   test 'should not save a building without an investor name' do
-    skip 'test later'
+    user = build(:user)
+    building = Building.new
+    building.address = '30-310 Wrocław, ul. Komandosów 14/12'
+    building.building_area = 192
+    building.residents_number = 4
+    building.user = user
+    assert_not building.save, 'Saved the building without an investor name'
   end
 
   test 'should not save a building without residents number' do
-    skip 'test later'
+    user = build(:user)
+    building = Building.new
+    building.address = '30-310 Wrocław, ul. Komandosów 14/12'
+    building.building_area = 192
+    building.investor_name = 'Jacob Stellar'
+    building.user = user
+    assert_not building.save, 'Saved the building without residents number'
   end
 
-  test 'should not save a building without user' do
-    skip 'test later'
+  test 'should not save a building without a user' do
+    building = Building.new
+    building.address = '30-310 Wrocław, ul. Komandosów 14/12'
+    building.building_area = 192
+    building.investor_name = 'Jacob Stellar'
+    building.residents_number = 4
+    assert_not building.save, 'Saved the building without a user'
   end
 end
