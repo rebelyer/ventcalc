@@ -17,13 +17,10 @@
 #
 #  fk_rails_...  (building_id => buildings.id)
 #
-
-one:
-  name: MyString
-  position: 1
-  building: one
-
-two:
-  name: MyString
-  position: 1
-  building: two
+FactoryBot.define do
+  factory :floor do
+    sequence(:name) { |n| "floor_#{n}" }
+    sequence(:position) { |n| n }
+    building
+  end
+end

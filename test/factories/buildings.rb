@@ -20,16 +20,12 @@
 #  fk_rails_...  (user_id => users.id)
 #
 
-one:
-  investor_name: MyString
-  address: MyString
-  building_area: 1
-  residents_number: 1
-  user: one
-
-two:
-  investor_name: MyString
-  address: MyString
-  building_area: 1
-  residents_number: 1
-  user: two
+FactoryBot.define do
+  factory :building do
+    sequence(:address){ |n| "ul. Krakowska #{n}, 30-315 Kraków" }
+    sequence(:building_area) { |n| 230 + n }
+    investor_name { 'Janusz Kowalski' }
+    sequence(:residents_number) { |n| 4 + n }
+    user
+  end
+end

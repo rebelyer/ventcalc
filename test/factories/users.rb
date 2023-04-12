@@ -22,8 +22,15 @@
 # model remove the "{}" from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {}
-# column: value
-#
-two: {}
-# column: value
+
+FactoryBot.define do
+  factory :user do
+    sequence(:email) { |n| "user_#{n}@email.com" }
+    sequence(:password) { |n| "password_#{n}" }
+    role { 'user' }
+
+    trait :admin do
+      role { 'admin' }
+    end
+  end
+end

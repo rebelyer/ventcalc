@@ -23,20 +23,15 @@
 #  fk_rails_...  (floor_id => floors.id)
 #
 
-one:
-  name: MyString
-  type: 1
-  residents_number: 1
-  area: 1.5
-  height: 1.5
-  air_flow: 1
-  air_direction: 1
-
-two:
-  name: MyString
-  type: 1
-  residents_number: 1
-  area: 1.5
-  height: 1.5
-  air_flow: 1
-  air_direction: 1
+FactoryBot.define do
+  factory :room do
+    air_direction { 'supply' }
+    air_flow { 50 }
+    area { 14.0 }
+    height { 2.7 }
+    sequence(:name) { |n| "bedroom_#{n}" }
+    residents_number { 2 }
+    type { 'bedroom' }
+    floor
+  end
+end

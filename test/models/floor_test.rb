@@ -20,7 +20,15 @@
 require "test_helper"
 
 class FloorTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  test 'should not save a floor without a name' do
+    skip 'test later'
+  end
+
+  test 'should not save a floor without a position' do
+    skip 'test later'
+  end
+
+  test 'shoult not save a floor without a building' do
+    skip 'test later'
+  end
 end

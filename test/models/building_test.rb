@@ -25,4 +25,23 @@ class BuildingTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
+  test 'should not save a building without an address' do
+    skip 'test later'
+  end
+
+  test 'should not save a building without a building area' do
+    skip 'test later'
+  end
+
+  test 'should not save a building without an investor name' do
+    skip 'test later'
+  end
+
+  test 'should not save a building without residents number' do
+    skip 'test later'
+  end
+
+  test 'should not save a building without user' do
+    skip 'test later'
+  end
 end
